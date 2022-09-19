@@ -1,0 +1,28 @@
+
+.iconos-nosotros{
+    @include grid(3,2rem);
+
+    @include telefono {
+    @include grid(1,2rem);
+        
+    }
+}
+
+
+.icono{
+    img{
+        height: 10rem;
+    }
+
+    h3{
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+
+    p{
+        @include telefono {
+            margin-left: 2rem;
+            text-align: center;
+        }
+    }
+}

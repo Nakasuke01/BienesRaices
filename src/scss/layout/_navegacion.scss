@@ -1,0 +1,116 @@
+
+.derecha{
+    display: flex;
+    flex-direction: row-reverse;
+    @include telefono {
+        flex-direction:column;
+        align-items: center;
+    }
+
+    .dark-mode-boton{
+        width: 4rem;
+        margin-top: 0;
+        margin-bottom: 2rem;
+
+        filter: invert(100%);
+        -webkit-filter: invert(100%);
+
+        @include telefono {
+            margin-top: 1rem;
+        }
+
+
+        &:hover{cursor: pointer;}
+}
+
+    
+}
+
+
+.barra{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 3rem;
+    @include telefono {
+        flex-direction:column;
+        align-items: center;
+    }
+    
+}
+
+
+.navegacion{
+
+    margin-top: 3rem;
+    @include telefono {
+        margin-top: 0;
+        margin-left: 2rem;
+        text-align: center;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility .3s ease-in-out, opacity 0.5s linear;
+        -webkit-transition: visibility .3s ease-in-out, opacity 0.5s linear;
+        -moz-transition: visibility .3s ease-in-out, opacity 0.5s linear;
+        -ms-transition: visibility .3s ease-in-out, opacity 0.5s linear;
+        -o-transition: visibility .3s ease-in-out, opacity 0.5s linear;
+}
+    
+    a{
+    color: $blanco;
+    text-decoration: none;
+    font-size: 1.8rem;
+    margin-right: 2rem;
+
+        &:last-of-type{
+            margin-left: 1.7rem;
+            @include telefono {
+                margin-left: 0;
+            }
+        }    
+        @include telefono {
+        display: block; 
+        }
+
+        &:hover{
+            color: $verde;
+        }
+
+
+    }
+}
+
+
+
+//Menu de hamburgesa
+
+.mobile-menu{
+    
+    img{
+        width: 5rem;
+        @media (min-width:481px) {
+            display: none;
+            text-align: center;
+        }
+    }
+}
+
+
+.mostrar{
+    display: block;
+    @include telefono {
+        visibility:visible;
+        opacity: 1;
+        text-align: center;
+    }
+}
+
+footer{
+    .navegacion{
+        @include telefono{
+            visibility:visible;
+            opacity: 1;
+            text-align: center;
+        }
+    }
+}

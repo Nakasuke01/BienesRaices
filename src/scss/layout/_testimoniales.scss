@@ -1,0 +1,53 @@
+
+
+.testimonial{
+    background-color: $verde;
+    font-size: 2.4rem;
+    padding: .5rem;
+    color: $blanco;
+    margin-left: 4rem;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+
+    @include telefono {
+        margin-left: 2rem;
+    }
+
+    @media (min-width: 300px) {
+        margin: 0px;
+        left: -5rem;
+    }
+
+
+    
+    blockquote{
+        padding: 2rem;
+        position: relative;
+        
+
+        @include tablet {
+            padding: 4rem;
+        }
+
+
+
+        &::before{
+            content: '';
+            background-image: url(../img/comilla.svg);
+            background-repeat: no-repeat;
+            width: 6rem;
+            height: 8rem;
+            display: block;
+            position: absolute;
+            left: -4rem;
+        }
+    }
+
+
+    p{
+        margin-left: 4rem;
+    }
+}
